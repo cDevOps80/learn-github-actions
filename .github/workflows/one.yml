@@ -1,0 +1,8 @@
+- name: Name the Action
+  runner-name: Learning Actions
+  on: ['workflow_dispatch']
+  jobs:
+    dev:
+      steps:
+        - name: echoing
+          shell: echo "This is Git-hub Actions"
