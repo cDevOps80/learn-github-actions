@@ -8,15 +8,15 @@ jobs:
       - name: echoing
         run: |
          echo "This is Git-hub Actions"
-         exit 1
   qa:
     needs: dev
     runs-on: ubuntu-latest
     steps:
       - name: echoing
         run: echo "This is Git-hub Actions"
+
   pre-prod:
-    needs: qa
+    environment: 'qa'
     runs-on: ubuntu-latest
     steps:
       - name: echoing
