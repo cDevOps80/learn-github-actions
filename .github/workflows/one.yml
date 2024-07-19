@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echoing
-        shell: echo "This is Git-hub Actions"
+        run: echo "This is Git-hub Actions"
