@@ -1,1 +1,15 @@
 This is qa
+
+gitdiff=$(git diff HEAD^ HEAD --name-only)
+environment1=$(echo $gitdiff | awk -F"/" '{print $2}')
+
+- var
+    environment=${environment1}
+
+echo terragrunt run-all init --terragrunt-non-interactive --terragrunt-working-dir $environment
+
+echo terragrunt run-all init --terragrunt-non-interactive --terragrunt-working-dir "$(System.DefaultWorkingDirectory)/IaaC-SWAPA/$(environment)"
+
+
+
+echo azure-pipeline-all-env.yaml infra/dev/appservice-conai/terragrunt.hc  | grep "dev"
