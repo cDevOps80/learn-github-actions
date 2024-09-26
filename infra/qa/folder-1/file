@@ -13,3 +13,5 @@ echo terragrunt run-all init --terragrunt-non-interactive --terragrunt-working-d
 
 
 echo azure-pipeline-all-env.yaml infra/dev/appservice-conai/terragrunt.hc  | grep "dev"
+
+this is ram
