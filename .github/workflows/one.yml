@@ -22,4 +22,4 @@ jobs:
       - name: echoing
         run: echo "This is Git-hub Actions"
 
-# chaitu1 git diff --relative=infra/dev  HEAD^ HEAD --name-only
+# chaitu1 git diff --relative=infra/dev  HEAD^ HEAD  --name-only
