@@ -12,6 +12,8 @@ jobs:
         run: |
           echo "printing env $Name"
           exit 1
+      - name: printing 4
+        run: echo "Stage 4"
       - name: printing 3
         run: echo "stage 3"
       - name: failure
