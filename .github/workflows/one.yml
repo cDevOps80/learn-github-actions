@@ -11,4 +11,4 @@ jobs:
       - name: printing env
         run: |
           echo "printing env $Name"
-          
+        if: $Name == "chaitu1"
