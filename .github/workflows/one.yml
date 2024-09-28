@@ -11,4 +11,11 @@ jobs:
       - name: printing env
         run: |
           echo "printing env $Name"
-        if: $(( $Name == "chaitu1" ))
+          exit 1
+      - name: printing 3
+        run: echo "stage 3"
+      - name: failure
+        run: echo "failure"
+        if: ${{ failure() }}
+
+
