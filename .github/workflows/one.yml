@@ -1,25 +1,14 @@
-name: Name the Action
-run-name: Learning Actions
-on: ['workflow_dispatch']
+name: Learning GitHub-Actions
+on: ["workflow_dispatch"]
 jobs:
   dev:
     runs-on: ubuntu-latest
     steps:
-      - name: echoing
+      - name: code-checkout
         run: |
-         echo "This is Git-hub Actions"
-  qa:
-    needs: dev
-    runs-on: ubuntu-latest
-    steps:
-      - name: echoing
-        run: echo "This is Git-hub Actions"
-
-  pre-prod:
-    environment: 'qa'
-    runs-on: ubuntu-latest
-    steps:
-      - name: echoing
-        run: echo "This is Git-hub Actions"
-
-# chaitu1 git diff --relative=infra/dev  HEAD^ HEAD  --name-only
+          echo "code-checkout"
+          echo "Name=chaitu" > $GITHUB_ENV
+      - name: printing env
+        run: |
+          echo "printing env $Name"
+          
