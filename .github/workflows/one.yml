@@ -7,7 +7,7 @@ jobs:
       - name: code-checkout
         run: |
           echo "code-checkout"
-          echo "Name=chaitu" > $GITHUB_ENV
+          echo "Name=chaitu2" > $GITHUB_ENV
       - name: printing env
         run: |
           echo "printing env $Name"
