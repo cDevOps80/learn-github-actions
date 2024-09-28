@@ -13,7 +13,7 @@ jobs:
           echo "printing env $Name"
       - name: printing 4
         run: echo "Stage 4"
-        if: ${{ $Name == "chaitu" }}
+        if: ${{ env.Name == "chaitu" }}
       - name: printing 3
         run: echo "stage 3"
       - name: failure
