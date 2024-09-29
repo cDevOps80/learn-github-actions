@@ -4,20 +4,6 @@ jobs:
   dev:
     runs-on: ubuntu-latest
     steps:
-      - name: code-checkout
-        run: |
-          echo "code-checkout"
-          echo "Name=chaitu2" > $GITHUB_ENV
-      - name: printing env
-        run: |
-          echo "printing env $Name"
-      - name: printing 4
-        run: echo "Stage 4"
-        if: ${{ env.Name == 'chaitu' }}
-      - name: printing 3
-        run: echo "stage 3"
-      - name: failure
-        run: echo "failure"
-        if: ${{ failure() }}
+
 
 
