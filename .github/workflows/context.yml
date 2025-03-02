@@ -8,4 +8,4 @@ jobs:
         run: echo "${{ toJSON(github) }}"
 
       - name: print env context
-        run: echo "${{ toJSON(env) }}"  
+        run: printenv
