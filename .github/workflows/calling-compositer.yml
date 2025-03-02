@@ -1,5 +1,8 @@
 name: calling compostie action
 on: [workflow_dispatch]
+env:
+  name: "Chaithanya"
+  age: 25
 jobs:
   build:
     runs-on: ubuntu-latest
