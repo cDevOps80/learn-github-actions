@@ -3,6 +3,7 @@ on: [workflow_dispatch]
 env:
   name: "Chaithanya"
   age: 25
+  INPUT_WHO_TO_GREET: "Chaithanya is greating to you"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,7 +13,7 @@ jobs:
 
       - name: Set Greeting
         run: |
-          echo "Hello $INPUT_WHO_TO_GREET."
+          echo "Hello ${INPUT_WHO_TO_GREET}."
           echo "MY_VARIABLE=Hello World" >> "$GITHUB_ENV"
 
       - name: Random Number Generator
