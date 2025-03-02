@@ -15,20 +15,11 @@ jobs:
         run: |
           echo "Hello ${INPUT_WHO_TO_GREET}."
           echo "==========================="
+          echo "::add-mask::${INPUT_WHO_TO_GREET}"
           echo "${{ env.INPUT_WHO_TO_GREET }}"
           echo "==========================="
           echo "MY_VARIABLE=Hello World" >> "$GITHUB_ENV"
 
-      - name: Random Number Generator
-        id: one
-        run:  |
-          echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
-          echo "$MY_VARIABLE"
-
-
-      - name: output  
-        run: |
-          echo "Random number is ${{ steps.one.outputs.random-number }}"  
 
 
 
