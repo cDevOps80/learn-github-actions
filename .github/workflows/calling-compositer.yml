@@ -1,0 +1,22 @@
+name: calling compostie action
+on: [workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        run: echo "Checking out the code."
+
+      - name: Call composite action
+        uses: cDevOps80/learn-github-actions/composite@main
+        id: call-composite
+        with:
+          who-to-greet: 'Mona'
+          
+      - name: Get output
+        run: echo "The random number is ${{ steps.call-composite.outputs.random-number }}."
+
+
+
+
+
