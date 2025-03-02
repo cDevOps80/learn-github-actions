@@ -4,5 +4,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: print github context
         run: echo "${{ toJSON(github) }}"
+
+      - name: print env context
+        run: echo "${{ toJSON(env) }}"  
