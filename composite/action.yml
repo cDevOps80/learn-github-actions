@@ -4,6 +4,7 @@ inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
+    default: 'Chaithanya'
 
 outputs:
   random-number:
@@ -19,7 +20,7 @@ runs:
           echo "Error: 'who-to-greet' is required but not provided."
           exit 1
         fi
-        
+
     - name: Set Greeting
       run: echo "Hello $INPUT_WHO_TO_GREET."
       shell: bash
