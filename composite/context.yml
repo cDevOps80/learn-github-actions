@@ -1,0 +1,8 @@
+name: contex
+on: [workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        run: echo "${{ toJSON(github) }}"
