@@ -1,5 +1,9 @@
 name: contex
 on: [workflow_dispatch]
+env:
+  name: "Chaithanya"
+  age: 25
+  INPUT_WHO_TO_GREET: "Chaithanya is greating to you"
 jobs:
   build:
     runs-on: ubuntu-latest
