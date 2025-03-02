@@ -19,7 +19,9 @@ jobs:
           echo "${{ env.INPUT_WHO_TO_GREET }}"
           echo "==========================="
           echo "MY_VARIABLE=Hello World" >> "$GITHUB_ENV"
-          echo "::add-mask::$MY_VARIABLE"
+          echo "::add-mask::$MY_VARIABLE" 
+          echo "This is = $MY_VARIABLE "
+          
 
       - name: Checking
         run: |
