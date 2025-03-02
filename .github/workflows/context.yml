@@ -18,3 +18,4 @@ jobs:
         run: |
           echo "run = ${{ GITHUB.ACTOR }}"
           echo "run2 = ${{ GITHUB.REF_PROTECTED }}"
+          echo "run3 = ${{ github.env.name }}"
