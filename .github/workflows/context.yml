@@ -9,3 +9,7 @@ jobs:
 
       - name: print env context
         run: printenv
+
+      - name: Checking different
+        run: |
+          echo "run = ${{ GITHUB.ACTOR }}"
