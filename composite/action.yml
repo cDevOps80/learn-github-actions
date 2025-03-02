@@ -12,6 +12,14 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - name: Check if who-to-greet is provided
+      shell: bash
+      run: |
+        if [ -z "${{ inputs.who-to-greet }}" ]; then
+          echo "Error: 'who-to-greet' is required but not provided."
+          exit 1
+        fi
+        
     - name: Set Greeting
       run: echo "Hello $INPUT_WHO_TO_GREET."
       shell: bash
