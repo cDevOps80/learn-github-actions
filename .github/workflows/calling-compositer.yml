@@ -7,14 +7,21 @@ jobs:
       - name: Checkout
         run: echo "Checking out the code."
 
-      - name: Call composite action
-        uses: cDevOps80/learn-github-actions/composite@main
-        id: call-composite
+      - name: Set Greeting
+        run: |
+          echo "Hello $INPUT_WHO_TO_GREET."
+          echo "MY_VARIABLE=Hello World" >> "$GITHUB_ENV"
 
-      - name: Get output
-        run: echo "The random number is ${{ steps.call-composite.outputs.random-number }}."
+      - name: Random Number Generator
+        id: one
+        run:  |
+          echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
+          echo "$MY_VARIABLE"
 
 
+      - name: output  
+        run: |
+          echo "Random number is ${{ steps.one.outputs.random-number }}"  
 
 
 

@@ -21,13 +21,17 @@ runs:
         fi
 
     - name: Set Greeting
-      run: echo "Hello $INPUT_WHO_TO_GREET."
+      run: |
+        echo "Hello $INPUT_WHO_TO_GREET."
+        echo "MY_VARIABLE=Hello World" >> "$GITHUB_ENV"
       shell: bash
       env:
         INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
 
     - name: Random Number Generator
       id: random-number-generator
-      run: echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
+      run:  |
+        echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
+        echo "$MY_VARIABLE"
       shell: bash
 
