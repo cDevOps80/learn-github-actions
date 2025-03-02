@@ -13,3 +13,4 @@ jobs:
       - name: Checking different
         run: |
           echo "run = ${{ GITHUB.ACTOR }}"
+          echo "run2 = ${{ GITHUB.REF_PROTECTED }}"
